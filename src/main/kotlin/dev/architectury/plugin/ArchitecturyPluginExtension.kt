@@ -195,17 +195,17 @@ open class ArchitectPluginExtension(val project: Project) {
                                 }
                             add(
                                 customRuntimeClasspath.name,
-                                "dev.architectury:architectury-transformer:$transformerVersion:runtime"
+                                "com.github.hellomouse:architectury-transformer:$transformerVersion:runtime"
                             )
                         } else {
                             add(
                                 JavaPlugin.RUNTIME_CLASSPATH_CONFIGURATION_NAME,
-                                "dev.architectury:architectury-transformer:$transformerVersion:runtime"
+                                "com.github.hellomouse:architectury-transformer:$transformerVersion:runtime"
                             )
                         }
                         add(
                             "architecturyJavaAgents",
-                            "dev.architectury:architectury-transformer:$transformerVersion:agent"
+                            "com.github.hellomouse:architectury-transformer:$transformerVersion:agent"
                         )
                         if (plsAddInjectables && injectInjectables) {
                             add(

@@ -31,6 +31,8 @@ repositories {
     maven { url "https://maven.shedaniel.me/" }
     gradlePluginPortal()
     mavenLocal()
+    maven { url 'https://jitpack.io' }
+    implementation 'com.github.hellomouse:architectury-transformer:fix-booting-with-dependencies-that-arent-present-SNAPSHOT'
 }
 
 apply plugin: 'java-gradle-plugin'
