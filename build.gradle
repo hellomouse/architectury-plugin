@@ -32,7 +32,6 @@ repositories {
     gradlePluginPortal()
     mavenLocal()
     maven { url 'https://jitpack.io' }
-    implementation 'com.github.hellomouse:architectury-transformer:fix-booting-with-dependencies-that-arent-present-SNAPSHOT'
 }
 
 apply plugin: 'java-gradle-plugin'
@@ -93,7 +92,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.72"
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.3.72"
     implementation "gradle.plugin.org.jetbrains.gradle.plugin.idea-ext:gradle-idea-ext:0.10"
-    implementation "dev.architectury:architectury-transformer:$transformer_version"
+    implementation 'com.github.hellomouse:architectury-transformer:fix-booting-with-dependencies-that-arent-present-SNAPSHOT'
     loom06CompileOnly "me.shedaniel:forgified-fabric-loom:$loom_version_06"
     loom09CompileOnly "dev.architectury:architectury-loom:$loom_version_09"
     loom010LegacyCompileOnly "dev.architectury:architectury-loom:$loom_version_010Legacy"
