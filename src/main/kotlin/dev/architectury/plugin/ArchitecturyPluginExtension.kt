@@ -31,7 +31,7 @@ import java.util.jar.JarOutputStream
 import java.util.jar.Manifest
 
 open class ArchitectPluginExtension(val project: Project) {
-    var transformerVersion = "5.2.81"
+    var transformerVersion = "fix-booting-with-dependencies-that-arent-present-SNAPSHOT"
     var injectablesVersion = "1.0.10"
     var minecraft = ""
     private var compileOnly = false
@@ -195,17 +195,17 @@ open class ArchitectPluginExtension(val project: Project) {
                                 }
                             add(
                                 customRuntimeClasspath.name,
-                                "dev.architectury:architectury-transformer:$transformerVersion:runtime"
+                                "com.github.hellomouse:architectury-transformer:$transformerVersion:runtime"
                             )
                         } else {
                             add(
                                 JavaPlugin.RUNTIME_CLASSPATH_CONFIGURATION_NAME,
-                                "dev.architectury:architectury-transformer:$transformerVersion:runtime"
+                                "com.github.hellomouse:architectury-transformer:$transformerVersion:runtime"
                             )
                         }
                         add(
                             "architecturyJavaAgents",
-                            "dev.architectury:architectury-transformer:$transformerVersion:agent"
+                            "com.github.hellomouse:architectury-transformer:$transformerVersion:agent"
                         )
                         if (plsAddInjectables && injectInjectables) {
                             add(
